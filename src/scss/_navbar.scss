@@ -1,0 +1,141 @@
+/* Desktop */
+@media screen and (min-width: 1000px) {
+  .nav-main {
+    display: flex;
+    justify-content: center;
+
+    .nav-cont {
+      display: grid !important;
+      grid-template-rows: 45px 35px;
+      grid-template-columns: 180px 600px 400px;
+    }
+
+    .nav-form {
+      form {
+        display: flex !important;
+      }
+    }
+  }
+}
+
+.nav-main {
+  background-color: $amarillo;
+  padding: 10px;
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+  position: relative;
+
+  .nav-cont {
+    display: block;
+
+    .nav-logo {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 5px;
+
+      img {
+        cursor: pointer;
+      }
+    }
+
+    .nav-form {
+      form {
+        display: block;
+        width: 100%;
+
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+        border-radius: 2px;
+        border: 0 rgba(0, 0, 0, 0.2);
+
+        ::placeholder {
+          color: $gris-holder;
+        }
+
+        input {
+          border: none;
+          border-radius: 2px;
+          outline: none;
+          padding: 7px 15px;
+          width: 100%;
+        }
+
+        button {
+          @media screen and (max-width: 1000px) {
+            display: none;
+          }
+
+          outline: none;
+          background-color: #fff;
+          color: $gris-oscuro;
+          border: none;
+          padding: 7px;
+          line-height: 1px;
+          position: relative;
+
+          &::before {
+            content: "";
+            border-left: solid $gris-claro 1px;
+            position: absolute;
+            left: 0;
+            top: 7px;
+            height: 70%;
+            background-color: #333;
+          }
+        }
+      }
+    }
+
+    .nav-puntos {
+      @media screen and (min-width: 1000px) {
+        display: flex;
+      }
+
+      cursor: pointer;
+      margin-left: 100px;
+      padding: 10px;
+      display: none;
+
+      p {
+        padding-left: 5px;
+      }
+    }
+
+    .nav-ubicacion {
+      .nav-ubicacion-btn {
+        display: flex;
+        cursor: pointer;
+        padding: 4px 2px;
+        border: solid rgba(0, 0, 0, 0) 1px;
+        border-radius: 5px;
+
+        span:nth-child(2) {
+          line-height: 15px;
+        }
+
+        &:hover {
+          border: solid rgba(0, 0, 0, 0.1) 1px;
+        }
+      }
+    }
+
+    .nav-menu,
+    .nav-cuenta {
+      @media screen and (max-width: 1000px) {
+        display: none;
+      }
+
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    .nav-cuenta {
+      margin-left: 10px;
+      font-weight: bold;
+    }
+  }
+
+  .carrito-counter {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}

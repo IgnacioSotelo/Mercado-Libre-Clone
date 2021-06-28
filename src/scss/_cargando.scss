@@ -1,0 +1,15 @@
+.cargando-cont {
+  display: flex;
+  background-color: #fff;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+
+.cargando-cont > div {
+  text-align: center;
+}
+
+.cargando-cont h1 {
+  padding-right: 20px;
+}

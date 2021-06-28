@@ -1,0 +1,25 @@
+.footer-cont {
+  background-color: #fff;
+  bottom: 0;
+  padding: 50px 20px 0;
+  border-top: solid rgba(0, 0, 0, 0.1) 1px;
+
+  nav {
+    margin-left: 350px;
+
+    ul {
+      li {
+        list-style-type: none;
+        display: inline;
+
+        padding: 10px;
+
+        font-size: 14px;
+
+        a {
+          color: #000;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+.info-footer {
+  font-size: 14px;
+
+  .mas-info {
+    position: relative;
+    height: 43px;
+    background-color: #fff;
+    padding-top: 10px;
+
+    p {
+      left: 50%;
+      transform: translateX(-50%);
+      position: absolute;
+      cursor: pointer;
+      border-left: solid rgba(0, 0, 0, 0.1) 1px;
+      border-right: solid rgba(0, 0, 0, 0.1) 1px;
+      border-top: solid rgba(0, 0, 0, 0.1) 1px;
+      border-radius: 4px 4px 0 0;
+      padding: 6px 20px;
+      background-color: #f7f7f7;
+    }
+  }
+
+  .enlaces-cont {
+    border-top: solid rgba(0, 0, 0, 0.1) 1px;
+    padding: 50px 200px;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #f7f7f7;
+    transition: 0.2s;
+    overflow: hidden;
+
+    .enlaces-cuadro {
+      h5 {
+        font-weight: bold;
+        font-size: 15px;
+        margin-bottom: 15px;
+      }
+
+      li {
+        list-style: none;
+
+        a {
+          color: #888;
+        }
+      }
+    }
+  }
+}
+
+// Negativo en translate! so: primero positivo, despues negativo:! :D

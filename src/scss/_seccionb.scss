@@ -1,0 +1,69 @@
+@mixin borde() {
+  content: "";
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.1);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 100px;
+}
+
+.seccionb-container {
+  background-color: #ffffff;
+
+  & > div {
+    display: flex;
+    justify-content: center;
+  }
+
+  & > div > div {
+    width: calc(100% / 3);
+    float: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.4;
+    position: relative;
+    padding: 0 35px;
+    text-align: center;
+    max-width: 400px;
+    font-size: 14px;
+
+    & h3 {
+      font-size: 20px;
+    }
+
+    & span {
+      color: #888;
+      font-size: 14px;
+    }
+  }
+
+  & > div > div:nth-child(2) {
+    &:not(.recuadro)::before {
+      @include borde();
+      left: 5px;
+    }
+    &:not(.recuadro)::after {
+      @include borde();
+      right: 5px;
+    }
+  }
+
+  .arrepentimiento {
+    padding: 10px 30px;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+
+    .recuadro {
+      border: solid rgba(0, 0, 0, 0.1) 1px;
+      padding: 15px 0 0 0;
+      margin: 10px;
+      width: 40%;
+      float: left;
+      text-align: center;
+    }
+  }
+}

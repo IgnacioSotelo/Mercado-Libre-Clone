@@ -1,0 +1,39 @@
+@mixin centrar() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-cont {
+  @include centrar();
+  background-color: $gris-main;
+  flex-direction: column;
+
+  .cont-pagos {
+    @include centrar();
+    margin: 30px auto;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+
+    .cont-pagos-card {
+      @include centrar();
+      padding: 20px 30px;
+      max-height: 80px;
+
+      .cont-pagos-icono {
+        span {
+          border: solid $gris-claro 1px;
+          padding: 10px;
+          border-radius: 50%;
+          color: $azul-claro;
+        }
+      }
+    }
+
+    .cont-pagos-info {
+      padding: 10px;
+      line-height: 10px !important;
+    }
+  }
+}
